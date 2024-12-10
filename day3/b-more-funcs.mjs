@@ -41,4 +41,6 @@ const execute = (params) =>
     { sum: 0, doMul: true },
   );
 
-console.log(execute(gatherValidExpressions(getInput())).sum);
+const solve = () =>
+  console.log(execute(gatherValidExpressions(getInput())).sum);
+if (import.meta.url === `file://${process.argv[1]}`) solve();

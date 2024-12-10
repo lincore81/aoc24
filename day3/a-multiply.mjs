@@ -20,4 +20,6 @@ const gatherParams = (data) => {
 const execute = (params) =>
   params.map(([a, b]) => a * b).reduce((acc, x) => acc + x, 0);
 
-console.log(execute(gatherParams(getInput())));
+const solve = () => console.log(execute(gatherParams(getInput())));
+
+if (import.meta.url === `file://${process.argv[1]}`) solve();
