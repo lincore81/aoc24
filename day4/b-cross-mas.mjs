@@ -90,12 +90,11 @@ export const matchesPattern = (grid, [x, y], pattern) =>
  * @param {[number, number]} [x, y]
  * @returns {number} count
  */
-export const checkForCrossMas = (grid, [x, y]) => {
-  return patterns
+export const checkForCrossMas = (grid, [x, y]) =>
+  patterns
     .map((pattern) => matchesPattern(grid, [x, y], pattern))
     .filter(Boolean)
     .reduce((a, b) => a + b, 0);
-};
 
 export const solve = () => {
   const data = readInput();
